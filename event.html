@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>event list</h1>
+    <ul>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>A voluptatibus qui incidunt.</li>
+        <li onclick="this.innerText='click by me'">Dolor quae sed nulla.</li>// update roll
+        <li onclick="eventhandle(event)">Amet ipsum quibusdam repudiandae.</li>//update version means functin use inline.
+        <li id="lastPerson">Quam vero aspernatur numquam!</li>// old version
+    </ul>
+    <script>
+        function eventhandle(event){
+            console.log(event.target.innerText);
+
+        }
+        document.getElementById("lastPerson").addEventListener("click",eventhandle);//most usefull, we use it all time
+    </script>
+</body>
+</html>
